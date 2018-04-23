@@ -19,7 +19,8 @@
         <activity android:name=".base" />
         <activity android:name=".Events" />
         <activity android:name=".Register" />
-        <activity android:name=".Splash"></activity>
+        <activity android:name=".Splash" />
+        <activity android:name=".Enter"></activity>
     </application>
 
 </manifest>

@@ -1,3 +1,57 @@
 <resources>
     <string name="app_name">rowingEvent</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="entryTitle">Welcome</string>
+    <string name="entrySubtitle">Please Choose the crews you wish to enter</string>
+    <string name="entryButton">Enter</string>
+    <string name="boatEvent">Choose boat type</string>
+    <string name="amount">Club Name Here:</string>
+    <string name="total">Total fees so Far</string>
+    <string name="totalSoFar">$ Total</string>
+    <string name="menuReport">Report</string>
+    <string name="menuEnter">Enter</string>
+    <string name="reportTitle">Report</string>
+    <string name="defaultAmount">00</string>
+    <string name="defaultMethod">N/A</string>
+    <string name="menuReset">Reset</string>
+    <string name="menuLogout">Logout</string>
+    <string name="donateUsername">Username</string>
+    <string name="catagory">Choose age Catagory</string>
+    <string name="adminTitle">Admin Management Page</string>
+    <string name="addEvent">Add Event</string>
+    <string name="eventTitle">Choose Event</string>
+    <string name="eventButton">Enter</string>
+
+
+    <string-array name="catagories">
+        <item>MJ14</item>
+        <item>MJ15</item>
+        <item>MJ16</item>
+        <item>MJ18</item>
+        <item>MNovice</item>
+        <item>MIntermediate</item>
+        <item>MSenior</item>
+        <item>MMasters</item>
+        <item>WJ14</item>
+        <item>WJ15</item>
+        <item>WJ16</item>
+        <item>WJ18</item>
+        <item>WNovice</item>
+        <item>WIntermediate</item>
+        <item>WSenior</item>
+        <item>MMasters</item>
+    </string-array>
+
+    <string-array name="boats">
+        <item>1X</item>
+        <item>2X</item>
+        <item>2-</item>
+        <item>4X+</item>
+        <item>4X-</item>
+        <item>4-</item>
+        <item>4+</item>
+        <item>8+</item>
+    </string-array>
+    <string name="title_activity_event">Map</string>
 </resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Enter"
+    tools:layout_editor_absoluteY="81dp"
+    tools:showIn="@layout/activity_enter">
+
+
+    <TextView
+        android:id="@+id/entryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:text="@string/entryTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Username"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/entrySubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/entryTitle"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/entryTitle"
+        android:layout_marginBottom="68dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="62dp"
+        android:text="@string/entrySubtitle"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintBottom_toTopOf="@+id/catagories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/entryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="31dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/entryButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/Username"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="17dp"
+        android:text="TextView"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/entrySubtitle"
+        app:layout_constraintStart_toEndOf="@+id/entryTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/catagories"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="155dp"
+        android:entries="@array/catagories"
+        app:layout_constraintEnd_toEndOf="@+id/boats"
+        app:layout_constraintStart_toStartOf="@+id/catagory"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/catagory"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="43dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="51dp"
+        android:text="@string/catagory"
+        app:layout_constraintBottom_toBottomOf="@+id/catagories"
+        app:layout_constraintEnd_toEndOf="@+id/boatEvent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/entrySubtitle" />
+
+    <Spinner
+        android:id="@+id/boats"
+        android:layout_width="166dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:entries="@array/boats"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/boatEvent"
+        android:layout_width="137dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="51dp"
+        android:text="@string/boatEvent"
+        app:layout_constraintBottom_toBottomOf="@+id/boats"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/catagories" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>
