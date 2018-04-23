@@ -114,6 +114,22 @@
                 tools:ignore="LabelFor"
                 />
 
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Enter Name"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/registerName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textShortMessage"
+                android:singleLine="true"
+                tools:ignore="LabelFor"
+                />
+
             <Button
                 android:id="@+id/btnRegister"
                 android:layout_width="fill_parent"
@@ -122,6 +138,8 @@
                 android:onClick="register"
                 android:text="Register"
                 tools:ignore="HardcodedText" />
+
+
         </LinearLayout>
     </RelativeLayout>
 

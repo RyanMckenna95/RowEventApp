@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".base" />
         <activity android:name=".Events" />
-        <activity android:name=".Register"></activity>
+        <activity android:name=".Register" />
+        <activity android:name=".Splash"></activity>
     </application>
 
 </manifest>
