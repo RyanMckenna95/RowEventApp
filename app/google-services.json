@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "508154463871",
+    "firebase_url": "https://regatta-2833b.firebaseio.com",
+    "project_id": "regatta-2833b",
+    "storage_bucket": "regatta-2833b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508154463871:android:f21b52a1882a6484",
+        "android_client_info": {
+          "package_name": "ie.rowingevent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508154463871-7imhur42rfktgkmqiusd72sarajo7ose.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ie.rowingevent",
+            "certificate_hash": "18a296330eeefd1ff74b5659337e15a43ea978c6"
+          }
+        },
+        {
+          "client_id": "508154463871-828u4qn2jprmmtiri6qq5k9ictafle49.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLKU-9INKG3-6loNSrdyd7MLP3v85tBJ4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508154463871-828u4qn2jprmmtiri6qq5k9ictafle49.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
