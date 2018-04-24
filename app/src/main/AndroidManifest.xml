@@ -20,7 +20,8 @@
         <activity android:name=".Events" />
         <activity android:name=".Register" />
         <activity android:name=".Login" />
-        <activity android:name=".Enter"></activity>
+        <activity android:name=".Enter" />
+        <activity android:name=".EntryList"></activity>
     </application>
 
 </manifest>

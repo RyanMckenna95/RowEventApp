@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Enter"
-    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteY="137dp"
     tools:showIn="@layout/activity_enter">
 
 
@@ -31,12 +31,12 @@
         android:layout_alignEnd="@+id/entryTitle"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/entryTitle"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="60dp"
         android:layout_marginStart="9dp"
         android:layout_marginTop="62dp"
         android:text="@string/entrySubtitle"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        app:layout_constraintBottom_toTopOf="@+id/catagories"
+        app:layout_constraintBottom_toBottomOf="@+id/catagory"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,11 +46,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="31dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="34dp"
         android:text="@string/entryButton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <TextView
@@ -70,49 +70,66 @@
         android:id="@+id/catagories"
         android:layout_width="0dp"
         android:layout_height="34dp"
-        android:layout_marginTop="155dp"
+        android:layout_marginBottom="39dp"
+        android:layout_marginTop="42dp"
         android:entries="@array/catagories"
+        app:layout_constraintBottom_toBottomOf="@+id/boatEvent"
         app:layout_constraintEnd_toEndOf="@+id/boats"
         app:layout_constraintStart_toStartOf="@+id/catagory"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/catagory" />
 
     <TextView
         android:id="@+id/catagory"
         android:layout_width="0dp"
         android:layout_height="33dp"
-        android:layout_marginBottom="43dp"
+        android:layout_marginBottom="115dp"
         android:layout_marginEnd="4dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="51dp"
+        android:layout_marginTop="113dp"
         android:text="@string/catagory"
-        app:layout_constraintBottom_toBottomOf="@+id/catagories"
+        app:layout_constraintBottom_toTopOf="@+id/boats"
         app:layout_constraintEnd_toEndOf="@+id/boatEvent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/entrySubtitle" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/boats"
         android:layout_width="166dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="33dp"
         android:entries="@array/boats"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/boatEvent" />
 
     <TextView
         android:id="@+id/boatEvent"
         android:layout_width="137dp"
         android:layout_height="18dp"
-        android:layout_marginBottom="53dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="51dp"
+        android:layout_marginTop="210dp"
         android:text="@string/boatEvent"
-        app:layout_constraintBottom_toBottomOf="@+id/boats"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/catagories" />
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/priceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/priceOftitle"
+        app:layout_constraintBaseline_toBaselineOf="@+id/priceOf"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/priceOf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="143dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/priceName"
+        tools:text="Hello"/>
 
 
 </android.support.constraint.ConstraintLayout>

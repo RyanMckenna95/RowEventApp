@@ -22,7 +22,16 @@
     <string name="addEvent">Add Event</string>
     <string name="eventTitle">Choose Event</string>
     <string name="eventButton">Enter</string>
+    <string name="priceOftitle">Price of entry:</string>
 
+    <string-array name="events">
+        <item>Please Choose Event</item>
+        <item>Cork Regatta</item>
+        <item>Trinity Regatta</item>
+        <item>Galway Regatta</item>
+        <item>Carlow Regatta</item>
+        <item>Clonmel Regatta</item>
+    </string-array>
 
     <string-array name="catagories">
         <item>MJ14</item>
@@ -53,5 +62,6 @@
         <item>4+</item>
         <item>8+</item>
     </string-array>
+
     <string name="title_activity_event">Map</string>
 </resources>

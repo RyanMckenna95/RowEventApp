@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/EventTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="44dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/boatsCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/EventTitle"
+        android:layout_below="@+id/EventTitle"
+        android:layout_marginTop="12dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/ageCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/boatsCat"
+        android:layout_marginStart="46dp"
+        android:layout_toEndOf="@+id/EventTitle"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ageCat"
+        android:layout_below="@+id/boatsCat"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/boatVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/boatsCat"
+        android:layout_below="@+id/price"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/ageVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/price"
+        android:layout_below="@+id/boatVal"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/priceVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/boatVal"
+        android:layout_below="@+id/ageVal"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/deleatBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/boatsCat"
+        android:layout_alignParentEnd="true"
+        android:text="Button" />
+
+</RelativeLayout>
