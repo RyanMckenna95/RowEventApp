@@ -81,4 +81,13 @@ public class Login extends AppCompatActivity {
                     }
                 });
     }
+
+    public void register(View v) {
+        startActivity (new Intent(this, Register.class));
+    }
+
+    private void startHomeScreen() {
+        Intent intent = new Intent(Login.this, Enter.class);
+        Login.this.startActivity(intent);
+    }
 }

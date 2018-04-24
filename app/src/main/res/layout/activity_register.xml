@@ -73,7 +73,7 @@
                 tools:ignore="HardcodedText" />
 
             <EditText
-                android:id="@+id/registerUsername"
+                android:id="@+id/registerEmail"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
