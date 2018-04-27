@@ -48,9 +48,8 @@ public class Enter extends AppCompatActivity {
         user=Auth.getCurrentUser();
         db = FirebaseDatabase.getInstance();
         Log.i("database",db.toString());
-        Intent i=getIntent();
-        String pickedEvent= i.getStringExtra("eventPicked");
-        dbRef = db.getReference().child(pickedEvent);
+
+        dbRef = db.getReference().child("regattas");
 
         catSpinner=findViewById(R.id.catagories);
         boatSpinner=findViewById(R.id.boats);
@@ -106,12 +105,13 @@ public class Enter extends AppCompatActivity {
         enterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i=getIntent();
                 String myBoats = boatSpinner.getSelectedItem().toString();
                 String cats = catSpinner.getSelectedItem().toString();
                 String pricey = price.getText().toString();
+                String title = i.getStringExtra("eventPicked");
 
-                Entries entryModel= new Entries(myBoats,cats,pricey);
+                Entries entryModel= new Entries(title,myBoats,cats,pricey);
 
 
 

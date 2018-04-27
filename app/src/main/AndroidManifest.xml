@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Splash">
+        <activity android:name=".Events">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".base" />
-        <activity android:name=".Events" />
+        <activity android:name=".Splash" />
         <activity android:name=".Register" />
         <activity android:name=".Login" />
         <activity android:name=".Enter" />

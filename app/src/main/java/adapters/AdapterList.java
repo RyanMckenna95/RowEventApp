@@ -56,9 +56,6 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
             boatCat=itemView.findViewById(R.id.boatsCat);
             ageCat=itemView.findViewById(R.id.ageCat);
             price=itemView.findViewById(R.id.price);
-            boatVal=itemView.findViewById(R.id.boatVal);
-            ageVal=itemView.findViewById(R.id.ageVal);
-            priceVal=itemView.findViewById(R.id.priceVal);
             delete=itemView.findViewById(R.id.deleatBtn);
 
 

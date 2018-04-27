@@ -8,8 +8,10 @@ public class Entries {
     private String BoatType;
     private  String Catagory;
     private  String price;
+    private String title;
 
-    public Entries(String boatType, String catagory, String price) {
+    public Entries(String title, String boatType, String catagory, String price) {
+        this.title = title;
         BoatType = boatType;
         Catagory = catagory;
         this.price = price;
@@ -17,6 +19,14 @@ public class Entries {
 
     public Entries(){
 
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getBoatType() {
@@ -49,6 +59,7 @@ public class Entries {
                 "BoatType='" + BoatType + '\'' +
                 ", Catagory='" + Catagory + '\'' +
                 ", price='" + price + '\'' +
+                ", title='" + title + '\'' +
                 '}';
     }
 }
