@@ -53,12 +53,15 @@ public class Events extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 myEvent = eventSpinner.getSelectedItem().toString();
+
                 dbRef = db.getReference().child(myEvent);
                 Log.i("database",dbRef.toString());
 
+                Intent intent= new Intent(Events.this,Enter.class);
+                intent.putExtra("eventPicked",myEvent);
                 //dbRef.setValue("hello");
 
-                startActivity(new Intent(Events.this,Enter.class));
+                startActivity(intent);
 
             }
         });

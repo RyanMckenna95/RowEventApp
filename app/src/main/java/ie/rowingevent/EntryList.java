@@ -52,6 +52,8 @@ public class EntryList extends AppCompatActivity {
         adapterList.notifyDataSetChanged();//update the recycler view to the changes
 
 
+
+
     }
 
 //    @Override
@@ -83,42 +85,5 @@ public class EntryList extends AppCompatActivity {
         }return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        dbRef.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                //Entries entry= dataSnapshot.getValue(Entries.class);
-//                entry = String.valueOf(entry);
-//                entriesList.add(entry);
-                adapterList = new AdapterList( EntryList.this, entriesList);
-                recyclerView.setAdapter(adapterList);
 
-            }
-
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-
-
-
-});
-    }
 }
