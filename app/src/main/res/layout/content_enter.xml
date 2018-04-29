@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Enter"
-    tools:layout_editor_absoluteY="137dp"
+    tools:layout_editor_absoluteY="81dp"
     tools:showIn="@layout/activity_enter">
 
 
@@ -18,11 +18,12 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:text="@string/entryTitle"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        app:layout_constraintBaseline_toBaselineOf="@+id/race"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/entrySubtitle"
@@ -31,12 +32,12 @@
         android:layout_alignEnd="@+id/entryTitle"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/entryTitle"
-        android:layout_marginBottom="60dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="62dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="88dp"
         android:text="@string/entrySubtitle"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        app:layout_constraintBottom_toBottomOf="@+id/catagory"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,90 +47,98 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="28dp"
-        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:text="@string/entryButton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <TextView
         android:id="@+id/race"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:text="TextView"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/entrySubtitle"
-        app:layout_constraintStart_toEndOf="@+id/entryTitle"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entryTitle" />
 
     <Spinner
         android:id="@+id/catagories"
-        android:layout_width="0dp"
-        android:layout_height="34dp"
-        android:layout_marginBottom="39dp"
-        android:layout_marginTop="42dp"
+        android:layout_width="368dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:entries="@array/catagories"
-        app:layout_constraintBottom_toBottomOf="@+id/boatEvent"
-        app:layout_constraintEnd_toEndOf="@+id/boats"
-        app:layout_constraintStart_toStartOf="@+id/catagory"
-        app:layout_constraintTop_toTopOf="@+id/catagory" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catagory" />
 
     <TextView
         android:id="@+id/catagory"
-        android:layout_width="0dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="115dp"
-        android:layout_marginEnd="4dp"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="113dp"
+        android:layout_marginTop="24dp"
         android:text="@string/catagory"
-        app:layout_constraintBottom_toTopOf="@+id/boats"
-        app:layout_constraintEnd_toEndOf="@+id/boatEvent"
+        android:textAppearance="@android:style/TextAppearance"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/entrySubtitle" />
 
     <Spinner
         android:id="@+id/boats"
-        android:layout_width="166dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="33dp"
+        android:layout_width="374dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:entries="@array/boats"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/boatEvent" />
 
     <TextView
         android:id="@+id/boatEvent"
-        android:layout_width="137dp"
-        android:layout_height="18dp"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="210dp"
+        android:layout_marginTop="24dp"
         android:text="@string/boatEvent"
+        android:textAppearance="@android:style/TextAppearance"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/catagories" />
 
     <TextView
         android:id="@+id/priceName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_width="133dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
         android:text="@string/priceOftitle"
-        app:layout_constraintBaseline_toBaselineOf="@+id/priceOf"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textAppearance="@android:style/TextAppearance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boats" />
 
     <TextView
         android:id="@+id/priceOf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="143dp"
-        android:layout_marginStart="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="79dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/priceName"
         app:layout_constraintStart_toEndOf="@+id/priceName"
-        tools:text="Hello"/>
+        app:layout_constraintTop_toTopOf="@+id/priceName"
+        tools:text="Hello" />
 
 
 </android.support.constraint.ConstraintLayout>

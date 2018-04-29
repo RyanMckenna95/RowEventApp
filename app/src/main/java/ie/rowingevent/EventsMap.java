@@ -47,7 +47,7 @@ public class EventsMap extends FragmentActivity implements OnMapReadyCallback, G
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        Toast toast=Toast.makeText(getApplicationContext(), "MyToast Test", Toast.LENGTH_LONG);
+        Toast toast=Toast.makeText(getApplicationContext(), "Please select the Regatta you wish to enter by pressing one of the markers on the map", Toast.LENGTH_LONG);
         showMyToast(toast, 10000);
 
     }
@@ -67,31 +67,31 @@ public class EventsMap extends FragmentActivity implements OnMapReadyCallback, G
         mMap = googleMap;
         List<Marker> markers = new ArrayList<>();
 
-       dublin = mMap.addMarker(new MarkerOptions().position(DUBLIN).title("Dublin "));
+       dublin = mMap.addMarker(new MarkerOptions().position(DUBLIN).title("Dublin Regatta"));
        dublin.setTag(0);
        markers.add(dublin);
 
-        cork = mMap.addMarker(new MarkerOptions().position(CORK).title("Cork"));
+        cork = mMap.addMarker(new MarkerOptions().position(CORK).title("Cork Regatta"));
         cork.setTag(1);
         markers.add(cork);
 
-        limrick = mMap.addMarker(new MarkerOptions().position(LIMRICK).title("Dublin"));
+        limrick = mMap.addMarker(new MarkerOptions().position(LIMRICK).title("Limerick Regatta"));
         limrick.setTag(2);
         markers.add(limrick);
 
-        galway = mMap.addMarker(new MarkerOptions().position(GALWAY).title("Dublin"));
+        galway = mMap.addMarker(new MarkerOptions().position(GALWAY).title("Galway Regatta"));
         galway.setTag(3);
         markers.add(galway);
 
-        castleconnell = mMap.addMarker(new MarkerOptions().position(CASTLECONNELL).title("Dublin"));
+        castleconnell = mMap.addMarker(new MarkerOptions().position(CASTLECONNELL).title("Castleconnell Regatta"));
         castleconnell.setTag(4);
         markers.add(castleconnell);
 
-        champs = mMap.addMarker(new MarkerOptions().position(CHAMPS).title("Dublin"));
+        champs = mMap.addMarker(new MarkerOptions().position(CHAMPS).title("Irish Rowing Championships"));
         champs.setTag(5);
         markers.add(champs);
 
-        clonmel = mMap.addMarker(new MarkerOptions().position(CLONMEL).title("Dublin"));
+        clonmel = mMap.addMarker(new MarkerOptions().position(CLONMEL).title("Clonmel Regatta"));
         clonmel.setTag(6);
         markers.add(clonmel);
 
@@ -129,17 +129,48 @@ public class EventsMap extends FragmentActivity implements OnMapReadyCallback, G
 
     @Override
     public boolean onMarkerClick(Marker marker) {
-       if(marker.getTag().equals(0)){
-           Toast.makeText(getApplicationContext(), "Hello",Toast.LENGTH_LONG ).show();
-           Intent intent = new Intent(EventsMap.this, Enter.class);
-           intent.putExtra("Marker", marker.getTitle());
-           startActivity(intent);
+        if (marker.getTag().equals(0)) {
+            Toast.makeText(getApplicationContext(), "Please choose your entry", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(EventsMap.this, Enter.class);
+            intent.putExtra("Marker", marker.getTitle());
+            startActivity(intent);
 
-       }else if(marker.getTag().equals(1)){
-           Intent intent = new Intent(EventsMap.this, Enter.class);
-           intent.putExtra("Marker", marker.getTitle());
-       }
+        } else if (marker.getTag().equals(1)) {
+            Toast.makeText(getApplicationContext(), "Please choose your entry", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(EventsMap.this, Enter.class);
+            intent.putExtra("Marker", marker.getTitle());
+            startActivity(intent);
+        } else if (marker.getTag().equals(2)) {
+            Toast.makeText(getApplicationContext(), "Please choose your entry", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(EventsMap.this, Enter.class);
+            intent.putExtra("Marker", marker.getTitle());
+            startActivity(intent);
+
+        } else if (marker.getTag().equals(3)) {
+            Toast.makeText(getApplicationContext(), "Please choose your entry", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(EventsMap.this, Enter.class);
+            intent.putExtra("Marker", marker.getTitle());
+            startActivity(intent);
+
+        } else if (marker.getTag().equals(4)) {
+            Toast.makeText(getApplicationContext(), "Please choose your entry", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(EventsMap.this, Enter.class);
+            intent.putExtra("Marker", marker.getTitle());
+            startActivity(intent);
+
+        } else if (marker.getTag().equals(5)) {
+            Toast.makeText(getApplicationContext(), "Please choose your entry", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(EventsMap.this, Enter.class);
+            intent.putExtra("Marker", marker.getTitle());
+            startActivity(intent);
+
+        } else if (marker.getTag().equals(6)) {
+            Toast.makeText(getApplicationContext(), "Please choose your entry", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(EventsMap.this, Enter.class);
+            intent.putExtra("Marker", marker.getTitle());
+            startActivity(intent);
+
+        }
         return false;
     }
-
 }

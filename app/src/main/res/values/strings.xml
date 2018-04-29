@@ -2,7 +2,7 @@
     <string name="app_name">rowingEvent</string>
 
     <string name="action_settings">Settings</string>
-    <string name="entryTitle">Welcome</string>
+    <string name="entryTitle">Entry for:</string>
     <string name="entrySubtitle">Please Choose the crews you wish to enter</string>
     <string name="entryButton">Enter</string>
     <string name="boatEvent">Choose boat type</string>
