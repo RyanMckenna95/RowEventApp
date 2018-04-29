@@ -26,11 +26,14 @@
 
     <string-array name="events">
         <item>Please Choose Event</item>
+        <item>Irish Championship Regatta</item>
         <item>Cork Regatta</item>
-        <item>Trinity Regatta</item>
+        <item>Dublin Regatta</item>
         <item>Galway Regatta</item>
         <item>Carlow Regatta</item>
+        <item>Limerick Regatta</item>
         <item>Clonmel Regatta</item>
+        <item>Castleconnell Regatta</item>
     </string-array>
 
     <string-array name="catagories">
@@ -64,4 +67,6 @@
     </string-array>
 
     <string name="title_activity_event">Map</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_events_map">Map</string>
 </resources>

@@ -33,70 +33,71 @@ public class Events extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         setContentView(R.layout.activity_events);
-        Auth=FirebaseAuth.getInstance();
-        user=Auth.getCurrentUser();
-        db = FirebaseDatabase.getInstance();
+//        Auth=FirebaseAuth.getInstance();
+//        user=Auth.getCurrentUser();
+//        db = FirebaseDatabase.getInstance();
+//
+//
+//        eventSpinner=findViewById(R.id.eventSpinner);
+//        eventBtn=findViewById(R.id.EnterEvent);
+//        spinnerAdapter=ArrayAdapter.createFromResource(Events.this, R.array.events, android.R.layout.simple_spinner_item);
+//        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        eventSpinner.setAdapter(spinnerAdapter);
 
 
-        eventSpinner=findViewById(R.id.eventSpinner);
-        eventBtn=findViewById(R.id.EnterEvent);
-        spinnerAdapter=ArrayAdapter.createFromResource(Events.this, R.array.events, android.R.layout.simple_spinner_item);
-        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        eventSpinner.setAdapter(spinnerAdapter);
 
 
-
-
-        eventBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myEvent = eventSpinner.getSelectedItem().toString();
-
-                dbRef = db.getReference().child(myEvent);
-                Log.i("database",dbRef.toString());
-
-                Intent intent= new Intent(Events.this,Enter.class);
-                intent.putExtra("eventPicked",myEvent);
-                //dbRef.setValue("hello");
-
-                startActivity(intent);
-
-            }
-        });
+//        eventBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                myEvent = eventSpinner.getSelectedItem().toString();
+//
+//                dbRef = db.getReference().child(myEvent);
+//                Log.i("database",dbRef.toString());
+//
+//                Intent intent= new Intent(Events.this,Enter.class);
+//                intent.putExtra("eventPicked",myEvent);
+//                //dbRef.setValue("hello");
+//
+//                startActivity(intent);
+//
+//            }
+//        });
 
 
     }
 
-//    @Override
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_enter, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu and show the items.
-//        getMenuInflater().inflate(R.menu.menu_enter, menu);
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.main_menu, menu);
 //        return true;
 //    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle menu clicks here.
-        int id = item.getItemId();
-
-        switch (id) {
-            case R.id.menuReport:
-                startActivity(new Intent( Events.this, EntryList.class));
-                break;
-            case R.id.menuEnter:
-                startActivity(new Intent(Events.this, Enter.class));
-                break;
-
-
-            case R.id.menuLogout:
-                if (Auth != null && user != null) {
-                    Auth.signOut();
-                }
-                break;
-        }return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.menuReport) {
+//
+//            return true;
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 }
 
 

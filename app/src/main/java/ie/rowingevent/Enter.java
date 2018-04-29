@@ -32,16 +32,22 @@ public class Enter extends AppCompatActivity {
     private FirebaseAuth Auth;
     private Spinner catSpinner;
     private Spinner boatSpinner;
-    private TextView price;
+    private TextView price,race;
     private ArrayAdapter spinnerAdapter;
     private Button enterBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+       Toolbar toolbar = findViewById(R.id.toolbar);
+       setSupportActionBar(toolbar);
         setContentView(R.layout.activity_enter);
+        race = findViewById(R.id.race);
+        Intent i=getIntent();
+        String raceEntry = i.getStringExtra("Marker");
+
+        race.setText(raceEntry );
+
 
 
         Auth=FirebaseAuth.getInstance();
@@ -109,7 +115,8 @@ public class Enter extends AppCompatActivity {
                 String myBoats = boatSpinner.getSelectedItem().toString();
                 String cats = catSpinner.getSelectedItem().toString();
                 String pricey = price.getText().toString();
-                String title = i.getStringExtra("eventPicked");
+
+                String title = i.getStringExtra("Marker");
 
                 Entries entryModel= new Entries(title,myBoats,cats,pricey);
 
@@ -127,12 +134,12 @@ public class Enter extends AppCompatActivity {
         });
             }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu and show the items.
-//        getMenuInflater().inflate(R.menu.menu_enter, menu);
-//        return true;
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu and show the items.
+        getMenuInflater().inflate(R.menu.menu_enter, menu);
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -46,6 +47,8 @@ public class EntryList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entry_list);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         Auth=FirebaseAuth.getInstance();
         user=Auth.getCurrentUser();
         db = FirebaseDatabase.getInstance();
@@ -53,6 +56,7 @@ public class EntryList extends AppCompatActivity {
 
         searchButton = findViewById(R.id.searchButton);
         searchText = findViewById(R.id.searchText);
+        searchText.setFocusableInTouchMode(true);
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -110,34 +114,8 @@ public class EntryList extends AppCompatActivity {
         recyclerView.setAdapter(myadapter);
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu and show the items.
-//        getMenuInflater().inflate(R.menu.menu_enter, menu);
-//        return true;
-//    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle menu clicks here.
-        int id = item.getItemId();
-
-        switch (id) {
-            case R.id.menuReport:
-                //startActivity(new Intent( Enter.this, EntryList.class));
-                break;
-            case R.id.menuEnter:
-                startActivity(new Intent(EntryList.this, Enter.class));
-                break;
-
-
-            case R.id.menuLogout:
-                if (Auth != null && user != null) {
-                    Auth.signOut();
-                }
-                break;
-        }return super.onOptionsItemSelected(item);
     }
 
 
-}
+
