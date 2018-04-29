@@ -62,7 +62,8 @@ public class Register extends Activity {
                             if(!task.isSuccessful()){
                                 Toast.makeText(Register.this,"Could not sign up",Toast.LENGTH_LONG).show();
                             }else {
-                                startActivity(new Intent(Register.this,Events.class));
+                                Toast.makeText(Register.this, "Successfully registered! please sign in",Toast.LENGTH_LONG).show();
+                                startActivity(new Intent(Register.this,Login.class));
                                 finish();
                             }
                         }
